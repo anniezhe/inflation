@@ -1,25 +1,205 @@
-from dash import Dash, dcc, html, Input, Output, callback
-import os
+from dash import Dash, dcc, html
+import dash_bootstrap_components as dbc
+import dash
+import inflation_healthcare
 
-
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
-app = Dash(__name__, external_stylesheets=external_stylesheets)
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 server = app.server
 
-app.layout = html.Div([
-    html.H1('Hello World'),
-    dcc.Dropdown(['LA', 'NYC', 'MTL'],
-        'LA',
-        id='dropdown'
-    ),
-    html.Div(id='display-value')
-])
+##Descriptions
+EXPLAINER = """Most people live in a delicate balance between income, saving for retirement, 
+    if any, and spending for basic services such as food, clothing, housing, utilities, and medical care. 
+    Inflation, as it refers to prices everyone pays for the basics of living, catches the attention of 
+    everyone except for the wealthy 1% or 2%. Persistent price inflation above 2% to 3% can 
+    cause people to change their standard of living in their choices of food, clothing, medical care, 
+    and housing affordability. The goal is to explore the relationship between the inflation rate and 
+    the healthcare cost published by the US Bureau of Labor Statistics."""
 
-@callback(Output('display-value', 'children'), Input('dropdown', 'value'))
-def display_value(value):
-    return f'You have selected {value}'
+app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-if __name__ == '__main__':
+app.layout = dbc.Container(
+    [
+        html.H1("Inflation and Healthcare Costs"),
+        html.H3(dcc.Markdown("By: [Annie He](https://www.anniezhe.com)")),
+        dcc.Markdown(EXPLAINER),
+        dcc.Tabs(
+            [
+                dcc.Tab(
+                    label="Methods",
+                    children=[
+                        html.P(
+                            dcc.Markdown(
+                                "The following data from the Bureau of Labor Statistics (BLS) will be used to perform basic analysis on the US inflation and healthcare costs. For each data, all available years will be reviewed to identify any significant differences. Research on each significance that is identified will use past news reports and government and universities staff's work for sources. **Please note that this dashboard will contain data on or before October 2024.**"
+                            )
+                        ),
+                        html.Ul(
+                            id="BLS-data",
+                            children=[
+                                html.Li(
+                                    dcc.Markdown(
+                                        "[Civilian Labor Force Participation Rate - seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/LNS11300000)"
+                                    )
+                                ),
+                                html.Li(
+                                    dcc.Markdown(
+                                        "[Civilian Unemployment Rate - seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/LNS14000000)"
+                                    )
+                                ),
+                                html.Li(
+                                    dcc.Markdown(
+                                        "[Consumer Price Index for All Urban Consumers (CPI-U) - not seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/CUUR0000SA0)"
+                                    )
+                                ),
+                                html.Li(
+                                    dcc.Markdown(
+                                        "[Medical Care from Consumer Price Index Survey - not seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/CUUR0000SAM)"
+                                    )
+                                ),
+                                html.Li(
+                                    dcc.Markdown(
+                                        "[Prescription Drugs from Consumer Price Index Survey - not seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/CUUR0000SEMF01)"
+                                    )
+                                ),
+                                html.Li(
+                                    dcc.Markdown(
+                                        "[Nonprescription Drugs from Consumer Price Index Survey - not seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/CUUR0000SEMF02)"
+                                    )
+                                ),
+                                html.Li(
+                                    dcc.Markdown(
+                                        "[Employment-Population Ratio from the Current Population Survey - seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/LNS12300000)"
+                                    )
+                                ),
+                                html.Li(
+                                    dcc.Markdown(
+                                        "[Medical Care Services from Consumer Price Index Survey - not seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/CUUR0000SAM2)"
+                                    )
+                                ),
+                            ],
+                        ),
+                        html.H5(
+                            "Important note about all of these data from the BLS website"
+                        ),
+                        html.Ul(
+                            id="important-note",
+                            children=[
+                                html.Li(
+                                    dcc.Markdown("""
+                    The "Consumer Price Index for All Urban Consumers (CPI-U) - not seasonally adjusted" **with 12-month percent change (not net change) enabled** should be pulled and used if the purpose is to find out what is the inflation rate annually. When news reporters 
+                                     specify what is the inflation rate, the figure comes from this dataset. For more information, see [Overview of BLS Statistics on Inflation and Prices](https://www.bls.gov/bls/inflation.htm) and [BLS's "About the CPI Inflation Calculator"](https://www.bls.gov/data/inflation_calculator.htm).
+                """)
+                                ),
+                                html.Li(
+                                    dcc.Markdown("""The size of the labor force, employment, and unemployment undergo 
+                                     fluctuations due to seasonal events including changes in weather, 
+                                     harvests, major holidays, and school schedules. 
+                                     Because these seasonal events follow a more or 
+                                     less regular pattern each year, their influence on 
+                                     statistical trends can be eliminated by seasonally 
+                                     adjusting the statistics from month to month, which the seasonal adjustments are
+                                     done by the Bureau of Labor Statistics employees. More information can be found from the [BLS's "What is Seasonal Adjustment?" article](https://www.bls.gov/cps/seasfaq.htm).
+                                     """)
+                                ),
+                                html.Li(
+                                    dcc.Markdown(
+                                        """The Employment-Population Ratio data contains the percentage of the people who are currently working. More information regarding this definition can be found from the [BLS's "Labor Force Statistics Concepts and Definitions"](https://www.bls.gov/cps/definitions.htm)."""
+                                    )
+                                ),
+                            ],
+                        ),
+                    ],
+                ),
+                dcc.Tab(
+                    label="Report",
+                    children=[dcc.Graph(figure=inflation_healthcare.fig1)],
+                ),
+                dcc.Tab(label="Demo", children=[html.P("Hello.")]),
+                dcc.Tab(label="Conclusion", children=[html.P("Hello.")]),
+                dcc.Tab(
+                    label="Questions & Answers",
+                    children=[
+                        html.Div(
+                            dbc.Accordion(
+                                [
+                                    dbc.AccordionItem(
+                                        [
+                                            html.P(
+                                                dcc.Markdown("""
+Inflation occurs when the prices of many of the things we commonly buy increase over an extended period. 
+                                                                Recent price increases that were termed inflationary were caused mostly by interference with the supply of products and manufacturing materials, mostly due to external events. Most recently, the event was the worldwide COVID pandemic and in the past, an artificial interference with oil supplies from the cartel led by Saudi Arabia named OPEC.
+                                                                
+                                                    
+In the United States, the Federal Reserve Bank attempts to limit inflation and balance employment by adjusting the cost of borrowing money, also known as the interest rate, in order to maintain a stable economy with moderate growth rates in industry and services.
+                                                                
+                                                             
+Within the Federal Reserve, the Federal Open Market Committee (FOMC) announced in 2020 that it believed that "inflation at the rate of 2 percent, as measured by the annual change in the price index for personal consumption expenditures, is most consistent over the longer run with the Federal Reserve's statutory mandate". So, the FOMC's objective to have a 2 percent inflation rate was chosen, because they found, from analyzing the personal consumption expenditure data, that 2 percent would bring the country closer to achieving its goals of maximum employment and stable prices.
+
+
+**Important: please note that there's a difference between stable prices and affordable prices.** Stable prices in this case mean that there's no inflation or deflation. Even with a 2% inflation rate, if you want to be able to afford goods and services like food, housing, laundromat, clothing, etc., your wages need to catch up. That's why you hear discussions about increasing the minimum wage and why certain support programs such as Social Security are adjusted upwards to offset the inflation rate.                                                                
+                                                                
+Source(s): 
+* [What is inflation by Federal Reserve Bank -- Cleveland branch](https://www.clevelandfed.org/center-for-inflation-research/inflation-101/what-is-inflation-start), [How does the government measure inflation by Brookings](https://www.brookings.edu/articles/how-does-the-government-measure-inflation/)
+* [Federal Reserve's Statement on Longer-Run Goals and Moneotry Policy Strategy Q&A](https://www.federalreserve.gov/faqs/statement-on-longer-run-goals-monetary-policy-strategy-fomc.htm)
+* [How does the Federal Reserve affect inflation and employment?](https://www.federalreserve.gov/faqs/money_12856.htm)
+* [Oil Cartel Leader Says Demand Expected to Grow](https://www.bbc.com/news/business-66985654)
+* [The Great Inflation: A Historical Overview and Lessons Learned from Federal Bank -- St. Louis branch](https://www.stlouisfed.org/publications/page-one-economics/2012/10/01/the-great-inflation-a-historical-overview-and-lessons-learned)
+* [Energy History by Yale University](https://energyhistory.yale.edu/the-oil-shocks-of-the-1970s/)
+* [Federal Reserve Board's Statement on Longer-Run Goals and Monetary Policy Strategy](https://www.federalreserve.gov/monetarypolicy/files/FOMC_LongerRunGoals_202008.pdf) 
+""")
+                                            ),
+                                        ],
+                                        title="What is inflation?",
+                                    ),
+                                    dbc.AccordionItem(
+                                        [
+                                            html.P(
+                                                dcc.Markdown("""
+Almost never. Put it simply, deflation is a continued decrease in the prices of many things. Decreasing prices leads to reduced purchases as consumers wait for further price reductions. After an extended period, it would lead to massive unemployment and reduced economic activity. That's why we're sticking to 2-percent inflation rate, which encourages employment and is perceived as price stability for essential consumer goods and services.
+                                                               
+
+Source(s): [Inflation, Disinflation, and Deflation by Federal Rserve Bank -- St. Louis branch](https://www.stlouisfed.org/open-vault/2023/august/explaining-inflation-disinflation-deflation)
+                                                              """)
+                                            ),
+                                        ],
+                                        title="Is the opposite of inflation ever good?",
+                                    ),
+                                    dbc.AccordionItem(
+                                        [
+                                            html.P(
+                                                dcc.Markdown(
+                                                    """
+The stock market has almost nothing to do with inflation. The stock market is where companies and investors buy or sell a portion of the ownership in companies. Stocks are also known as equities. As an example, if I own 20% of NVIDIA's stocks, then 20% of NVIDIA corporation belongs to me. Wow, that would be a dream.
+
+
+The value of a stock -- or stock price -- is determined by a combination of the company's assets, liabilities, earnings potential, growth prospects, etc., which would require analysts (financial analysts that specialize in stock market, not me) and investors to estimate the value of a company's stock. In short, stock market prices are set by a complicated mix of speculation, investor’s assessment of future profitability of companies based on current and anticipated sales, and the possibility of external events interfering with commerce. 
+
+
+Stock prices are weakly associated with inflation mainly through the need for retired people to withdraw invested funds for their living expenses and through retirement funds set aside by working people throughout their career. If you are dependent on stocks for income, it can be a nightmare if the stocks that you've picked lose value.
+
+
+**Important note: The stock market is not a measure of how well the US economy is doing.**
+
+
+Source(s): [Understanding Stock Price and Value](https://www.investopedia.com/articles/stocks/08/stock-prices-fool.asp), [Stocks: What They Are, Main Types, and How They Differ From Bonds](https://www.investopedia.com/terms/s/stock.asp)
+"""
+                                                )
+                                            ),
+                                        ],
+                                        title="What's the relationship between the stock market and the inflation?",
+                                    ),
+                                ],
+                                flush=True,
+                                always_open=False
+                            )
+                        )
+                    ],
+                ),
+            ]
+        ),
+    ]
+)
+
+
+if __name__ == "__main__":
     app.run(debug=True)
