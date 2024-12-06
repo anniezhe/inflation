@@ -176,8 +176,9 @@ The "Report" and "Demo" tabs point to a continuous need to support the country's
 * The [US Treasury](https://fiscaldata.treasury.gov/americas-finance-guide/national-deficit/) currently reports $1.83 trillion in total deficit for FY2024, and it is continuing to rise.
 * For FY 2023, the [IRS](https://www.irs.gov/statistics/soi-tax-stats-irs-data-book) reported $456 billion in taxes from business income whereas individual income was $2.5 trillion and others (employment, estate and gift, and excise taxes) reported $1.6 trillion. 
 * One major reason why is the list of all deductions on [Form 1120](https://www.irs.gov/pub/irs-pdf/f1120.pdf) and [business tax credits that any businesses can claim](https://www.irs.gov/credits-deductions/businesses). Any businesses can use all of them for each tax year as long as they fulfill all the requirements when filing a tax return. 
+* IRS reported on [its website](https://www.irs.gov/newsroom/the-tax-gap) that roughly 87% of taxes were paid for tax years 2014-2016, which meant 13% of the taxes were still not paid. 
 
-The country needs at least $3 trillion more to cover all expenditures and some portions of the annual deficit. In order to continue supporting the country's healthcare system, there needs to be a review and a revision to the business side of the tax system in order to better distribute resources to people who need support and to continue protect and look after this country. 
+The country needs at least $3 trillion more to cover all expenditures and some portions of the annual deficit. In order to continue supporting the country's healthcare system, there needs to be a review and a revision to the tax system in order to better distribute resources to people who need support and to continue protect and look after this country. 
         
 '''))]),
                 dcc.Tab(
