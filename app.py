@@ -97,11 +97,11 @@ app.layout = dbc.Container(
                         dcc.Graph(figure=inflation_healthcare.fig6, responsive=True),
                         html.P(
                             dcc.Markdown(
-                                """ In the 1930s, patients had to cover all medical expenses -- mainly house visits by doctors, castor oil, and tonsillectomies -- out-of-pocket. Low cost hospitals existed but the culture during the 19th century was "a place to be sick and die". The idea 
+                                """ In the 1930s, patients had to cover all medical expenses -- mainly house visits by doctors, castor oil, and tonsillectomies -- out-of-pocket. Low cost hospitals existed but these places during the 19th century were "a place to be sick and die". The idea 
                                 of a private health insurance didn't take off until World War II. Medicare and Medicaid didn't exist until 1965. Out-of-pocket before 
                                   1933 meant gold. After 1933, out-of-pocket meant paper money backed with gold, because
                                    people hoarded gold and deflation reached 10% during the Great Depression, which the Great Depression lasted from 1929 to 1941. During that time, 
-                                   the BLS worked with other federal agencies to collect data on consumers' purchases to identify consumption estimates for urban and rural areas accross the country including medical care. 
+                                   the BLS worked with other federal agencies to collect data on consumers' purchases to identify consumption estimates for urban and rural areas across the country including medical care. 
                                    Eventually, the US couldn't afford to continue using gold for goods and services, so the country turned to paper money backed with gold.
                                    
                                    
@@ -109,7 +109,7 @@ In World War II, which lasted from 1939-1945, private insurance industry grew fa
 US government eventually heed people's call in 1965 with the establishment of Medicare and Medicaid after series of long and bitter arguments about how to best support the country and allowing lots of opportunities to choose and to make money.
 Medicare, as we know it today, is a health insurance program for the elderly. Medicaid is a health insurance program for people who have limited income. In 1973, the US ended using gold to support the dollar, because the demand for dollar kept increasing.
 Around that same time, the country experienced great inflation, which started in 1965, where everything including medical care became more expensive thanks to drastic oil price increase from OPEC, a cartel led by Saudi Arabia, failure to continue supporting paper money with gold, and an inadequate metric to 
-measure the US economy called the Philips Curve. Chairman Paul Volcker issued series of policies to bring inflation down. Although the road to recovery was painful, Chairman Volcker's policies worked. The Great Inflation ended in 1982.  
+measure the US economy called the Philips Curve. Chairman Paul Volcker issued series of policies to bring inflation down. Although the road to recovery was painful (2 recessions between 1980 and 1982), Chairman Volcker's policies worked. The Great Inflation ended in 1982.  
 
 
 Source(s):
@@ -131,7 +131,7 @@ Post 1973 US currency change, the medical landscape was in the middle of impleme
 encourage proactiveness in maintaining one's health and to combat soaring healthcare costs. It worked eventually in the mid-1990s, but it was not perfect. Patients and physicians saw
 that system as a major hinderance to full recovery because "treatment decisions were being taken from their hands and their clinical 
 judgements were being second-guessed". The health spending during the late 1980s and early 1990s increased rapidly because of "expensive new medical technologies and curtailing ambitious HMO-promoting programs".
-Prior to 2008, there were 45 million uninsured Americans. After the Affordable Care Act was passed, 92% of Americans in 2023 had health insurance. In 2022, COVID-19 pandemic hit, which badly affected everything from 
+Prior to 2008, there were 45 million uninsured Americans. After the Affordable Care Act was passed, 92% of Americans in 2023 had health insurance. In 2020, COVID-19 pandemic hit, which badly affected everything from 
 getting supplies to unemployment to the nation's health. Health wise, the country got out of COVID-19 thanks to modern technological advancement in vaccines. In other aspects, the country is still dealing with the
 aftermath of constricting supply lines during the COVID-19 pandemic (constricting supply lines leads to the need for hiring more people and increasing prices for products) and unsustainable increases for employment.
 The aftermath is a sticky inflation, 2.6% in October 2024 and 2.4% in September 2024, which are not within the Federal Reserve Board's 2% inflation target. 2% inflation target would lead to achieving price stability.
@@ -144,15 +144,16 @@ Source(s):
 * [Federal Reserve Board's Statement on Longer-Run Goals and Monetary Policy Strategy](https://www.federalreserve.gov/monetarypolicy/files/FOMC_LongerRunGoals_202008.pdf) ''')),
                         dcc.Graph(figure=inflation_healthcare.fig9, responsive=True),
                         html.P(dcc.Markdown('''
-In 2023, the median personal income is about $42,000. According to the [BEA's Personal Income](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*9tge84*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzQ1Mzc5My45LjEuMTczMzQ1MzgzNy4xNi4wLjA.#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI1OCJdXX0=), the country amassed $23.8 trillion dollar in 2023 quarter 4. 
+In 2023, the median personal income is about $42,000. According to the [US Bureau of Economic Analysis (BEA)'s Personal Income](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*9tge84*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzQ1Mzc5My45LjEuMTczMzQ1MzgzNy4xNi4wLjA.#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI1OCJdXX0=), the country amassed $23.8 trillion dollar in 2023 quarter 4. 
 
 ''')),
                         dcc.Graph(figure=inflation_healthcare.fig2, responsive=True),
                         dcc.Graph(figure=inflation_healthcare.fig3, responsive=True),
                         dcc.Graph(figure=inflation_healthcare.fig4, responsive=True),
+                        html.P(dcc.Markdown("The unemployment rate shows the percentage of people **who are actively looking for a job**.")),
                         dcc.Graph(figure=inflation_healthcare.fig5, responsive=True),
                         html.P(dcc.Markdown('''
-
+The "Civilian Not in Labor Force" graph represents people who are not eligible to be in the labor force -- people who are younger than 16 years old -- or who decided to not be in the labor force for multitude of reasons, **which are completely different from the unemployment rate graph**.
 '''))
                     ],
                 ),
@@ -160,12 +161,25 @@ In 2023, the median personal income is about $42,000. According to the [BEA's Pe
                     label="Demo",
                     children=[
                         html.P(dcc.Markdown('''
-
+To demonstrate what $100 medical cost would look like from 1974 to 2024, the medical cost data from the same source as the "Report" section was used.
+This time, "1-month % change" (not net change) was selected to see the percent change on every month. The formula being used to calculate the changes in dollars is cost(new) = cost(old) * (1 + (1-month % change/100)).
+Below is the graph showing what the $100 cost from 1974 would look like as time goes on.
 ''')),
                         dcc.Graph(figure=inflation_healthcare.fig8, responsive=True)
                     ],
                 ),
-                dcc.Tab(label="Conclusion", children=[html.P("Hello.")]),
+                dcc.Tab(label="Conclusion", children=[html.P(dcc.Markdown('''
+The "Report" and "Demo" tabs point to a continuous need to support the country's healthcare system and to improve the system. Recent records of the country's income were reviewed. Below are additional findings.
+* 2024 Quarter 3: the BEA reported $5.1 trillion in income for federal level, but its current expenditure is about $7 trillion. It's on the path to spend $9.7 trillion for FY 2024 according to [USASpending.gov](https://www.usaspending.gov/).
+* From BEA's report, the taxes on corporate income is noticeably low from the federal's perspective, which is about $483 billion for the same quarter in 2024. The overall (meaning from the federal, state, and local governments combined) is $647 billion.
+* More information for the previous two bullets can be found from the [BEA's Government Current Receipts and Expenditures](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*s3gg1p*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzUwODI5OS4xMC4xLjE3MzM1MDg5NDcuNjAuMC4w#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJDYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI4NiJdXX0=) and the [BEA's Federal Government Current Receipts and Expenditures](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*s3gg1p*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzUwODI5OS4xMC4xLjE3MzM1MDg5NDcuNjAuMC4w#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI4NyJdXX0=).
+* The [US Treasury](https://fiscaldata.treasury.gov/americas-finance-guide/national-deficit/) currently reports $1.83 trillion in total deficit for FY2024, and it is continuing to rise.
+* For FY 2023, the [IRS](https://www.irs.gov/statistics/soi-tax-stats-irs-data-book) reported $456 billion in taxes from business income whereas individual income was $2.5 trillion and others (employment, estate and gift, and excise taxes) reported $1.6 trillion. 
+* One major reason why is the list of all deductions on [Form 1120](https://www.irs.gov/pub/irs-pdf/f1120.pdf) and [business tax credits that any businesses can claim](https://www.irs.gov/credits-deductions/businesses). Any businesses can use all of them for each tax year as long as they fulfill all the requirements when filing a tax return. 
+
+The country needs at least $3 trillion more to cover all expenditures and some portions of the annual deficit. In order to continue supporting the country's healthcare system, there needs to be a review and a revision to the business side of the tax system in order to better distribute resources to people who need support and to continue protect and look after this country. 
+        
+'''))]),
                 dcc.Tab(
                     label="Questions & Answers",
                     children=[
