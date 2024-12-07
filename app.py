@@ -1,10 +1,10 @@
-from dash import Dash, dcc, html
+from dash import dcc, html
 import dash_bootstrap_components as dbc
 import dash
 import file.inflation_healthcare as inflation_healthcare
 
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
 ##Descriptions
@@ -16,9 +16,9 @@ EXPLAINER = """Most people live in a delicate balance between income, saving for
     and housing affordability. The goal is to explore the relationship between the inflation rate and 
     the healthcare cost published by the US Bureau of Labor Statistics."""
 
-app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-app.layout = html.Div(
+
+app.layout = dbc.Container(
     [
         html.H1("Inflation and Healthcare Costs"),
         html.H3(dcc.Markdown("By: [Annie He](https://www.anniezhe.com)")),
