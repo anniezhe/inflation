@@ -38,7 +38,7 @@ app.layout = dbc.Container(
                             children=[
                                 html.Li(
                                     dcc.Markdown(
-                                        "**[Civilian Labor Force Participation Rate - seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/LNS11300000)**. Percentage of people who are actively working (employed) and/or looking for a job (unemployed) according to the Current Population Survey, which is a collaboration between the BLS and the Census Bureau. The first piece of data from the Current Population Survey was available in 1948. More info can be found from the [Census Bureau's History of the Current Population Survey](https://www.census.gov/programs-surveys/cps/about/history-of-the-cps.html) and [BLS's How the Government Measures Unemployment](https://www.bls.gov/cps/cps_htgm.htm)."
+                                        "**[Civilian Labor Force Participation Rate - seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/LNS11300000)**. Percentage of people who are in the labor force according to the Current Population Survey, which is a collaboration between the BLS and the Census Bureau. The first piece of data from the Current Population Survey was available in 1948. More info can be found from the [Census Bureau's History of the Current Population Survey](https://www.census.gov/programs-surveys/cps/about/history-of-the-cps.html) and [BLS's How the Government Measures Unemployment](https://www.bls.gov/cps/cps_htgm.htm)."
                                     )
                                 ),
                                 html.Li(
