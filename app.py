@@ -43,7 +43,7 @@ app.layout = dbc.Container(
                                 ),
                                 html.Li(
                                     dcc.Markdown(
-                                        """**[Civilian Unemployment Rate - seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/LNS14000000)**. Percentage of people in the labor force who are looking for a job (unemployed) according to the Current Population Survey, which is a collaboration between the BLS and the Census Bureau. The first piece of data from the Current Population Survey was available in 1948. More info can be found from the [Census Bureau's History of the Current Population Survey](https://www.census.gov/programs-surveys/cps/about/history-of-the-cps.html) and [BLS's How the Government Measures Unemployment](https://www.bls.gov/cps/cps_htgm.htm)."""
+                                        """**[Civilian Unemployment Rate - seasonally adjusted](https://data.bls.gov/dataViewer/view/timeseries/LNS14000000)**. Percentage of people in the labor force who are unemployed and are looking for a job according to the Current Population Survey, which is a collaboration between the BLS and the Census Bureau. The first piece of data from the Current Population Survey was available in 1948. More info can be found from the [Census Bureau's History of the Current Population Survey](https://www.census.gov/programs-surveys/cps/about/history-of-the-cps.html) and [BLS's How the Government Measures Unemployment](https://www.bls.gov/cps/cps_htgm.htm)."""
                                     )
                                 ),
                                 html.Li(
