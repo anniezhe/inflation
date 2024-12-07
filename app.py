@@ -267,4 +267,4 @@ Source(s): [Understanding Stock Price and Value](https://www.investopedia.com/ar
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run_server()
