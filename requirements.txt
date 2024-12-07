@@ -16,6 +16,7 @@ et_xmlfile==2.0.0
 exceptiongroup==1.2.2
 executing==2.1.0
 Flask==3.0.3
+gunicorn==23.0.0
 idna==3.10
 importlib_metadata==8.5.0
 ipykernel==6.29.5
