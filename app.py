@@ -30,7 +30,7 @@ app.layout = dbc.Container(
                     children=[
                         html.P(
                             dcc.Markdown(
-                                "The following data from the Bureau of Labor Statistics (BLS) will be used to perform basic analysis on US inflation and healthcare costs. All data collection procedures for the list below are performed by the BLS. For each data, all available years will be reviewed to identify any significant differences. Research on each difference that is identified will use past news reports, government, and universities staff's work for sources. **Please note that this dashboard website will have all data on or before October 2024.**"
+                                "The following data from the Bureau of Labor Statistics (BLS) will be used to perform basic analysis on US inflation and healthcare costs. All data collection procedures for the list below are performed by the BLS. For each dataset, all available years will be reviewed to identify any significant differences. Research on each difference that is identified will use past news reports, government, and universities staff's work for sources. **Please note that this dashboard website will have all data on or before October 2024.**"
                             )
                         ),
                         html.Ul(
