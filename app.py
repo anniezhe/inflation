@@ -18,8 +18,8 @@ EXPLAINER = """Most people live in a delicate balance between income, saving for
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-app.layout = html.Div([dbc.Container(
-    
+app.layout = html.Div(
+    [
         html.H1("Inflation and Healthcare Costs"),
         html.H3(dcc.Markdown("By: [Annie He](https://www.anniezhe.com)")),
         dcc.Markdown(EXPLAINER),
@@ -126,7 +126,8 @@ Source(s):
                             )
                         ),
                         dcc.Graph(figure=inflation_healthcare.fig7, responsive=True),
-                        html.P(dcc.Markdown('''
+                        html.P(
+                            dcc.Markdown("""
 Post 1973 US currency change, the medical landscape was in the middle of implementing a new health insurance from the Health Maintenance Organization Act to 
 encourage proactiveness in maintaining one's health and to combat soaring healthcare costs. It worked eventually in the mid-1990s, but it was not perfect. Patients and physicians saw
 that system as a major hinderance to full recovery because "treatment decisions were being taken from their hands and their clinical 
@@ -141,34 +142,49 @@ Source(s):
 * [An Architectural History of US Community Hospitals](https://journalofethics.ama-assn.org/article/architectural-history-us-community-hospitals/2019-03)
 * [Health Insurance Coverage in the United States: 2023](https://www.census.gov/library/publications/2024/demo/p60-284.html)
 * [BLS's What caused the high inflation during the COVID-19 period?](https://www.bls.gov/opub/mlr/2023/beyond-bls/what-caused-the-high-inflation-during-the-covid-19-period.htm)
-* [Federal Reserve Board's Statement on Longer-Run Goals and Monetary Policy Strategy](https://www.federalreserve.gov/monetarypolicy/files/FOMC_LongerRunGoals_202008.pdf) ''')),
+* [Federal Reserve Board's Statement on Longer-Run Goals and Monetary Policy Strategy](https://www.federalreserve.gov/monetarypolicy/files/FOMC_LongerRunGoals_202008.pdf) """)
+                        ),
                         dcc.Graph(figure=inflation_healthcare.fig9, responsive=True),
-                        html.P(dcc.Markdown('''
+                        html.P(
+                            dcc.Markdown("""
 In 2023, the median personal income is about $42,000. According to the [US Bureau of Economic Analysis (BEA)'s Personal Income](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*9tge84*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzQ1Mzc5My45LjEuMTczMzQ1MzgzNy4xNi4wLjA.#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI1OCJdXX0=), the country amassed $23.8 trillion dollar in 2023 quarter 4. 
 
-''')),
+""")
+                        ),
                         dcc.Graph(figure=inflation_healthcare.fig2, responsive=True),
                         dcc.Graph(figure=inflation_healthcare.fig3, responsive=True),
                         dcc.Graph(figure=inflation_healthcare.fig4, responsive=True),
-                        html.P(dcc.Markdown("The unemployment rate shows the percentage of people **who are actively looking for a job**.")),
+                        html.P(
+                            dcc.Markdown(
+                                "The unemployment rate shows the percentage of people **who are actively looking for a job**."
+                            )
+                        ),
                         dcc.Graph(figure=inflation_healthcare.fig5, responsive=True),
-                        html.P(dcc.Markdown('''
+                        html.P(
+                            dcc.Markdown("""
 The "Civilian Not in Labor Force" graph represents people who are not eligible to be in the labor force -- people who are younger than 16 years old -- or who decided to not be in the labor force for multitude of reasons, **which are completely different from the unemployment rate graph**.
-'''))
+""")
+                        ),
                     ],
                 ),
                 dcc.Tab(
                     label="Demo",
                     children=[
-                        html.P(dcc.Markdown('''
+                        html.P(
+                            dcc.Markdown("""
 To demonstrate what $100 medical cost would look like from 1974 to 2024, the medical cost data from the same source as the "Report" section was used.
 This time, "1-month % change" (not net change) was selected to see the percent change on every month. The formula being used to calculate the changes in dollars is cost(new) = cost(old) * (1 + (1-month % change/100)).
 Below is the graph showing what the $100 cost from 1974 would look like as time goes on.
-''')),
-                        dcc.Graph(figure=inflation_healthcare.fig8, responsive=True)
+""")
+                        ),
+                        dcc.Graph(figure=inflation_healthcare.fig8, responsive=True),
                     ],
                 ),
-                dcc.Tab(label="Conclusion", children=[html.P(dcc.Markdown('''
+                dcc.Tab(
+                    label="Conclusion",
+                    children=[
+                        html.P(
+                            dcc.Markdown("""
 The "Report" and "Demo" tabs point to a continuous need to support the country's healthcare system and to improve the system. Recent records of the country's income were reviewed. Below are additional findings.
 * 2024 Quarter 3: the BEA reported $5.1 trillion in income for federal level, but its current expenditure is about $7 trillion. It's on the path to spend $9.7 trillion for FY 2024 according to [USASpending.gov](https://www.usaspending.gov/).
 * From BEA's report, the taxes on corporate income is noticeably low from the federal's perspective, which is about $483 billion for the same quarter in 2024. The overall (meaning from the federal, state, and local governments combined) is $647 billion.
@@ -180,7 +196,10 @@ The "Report" and "Demo" tabs point to a continuous need to support the country's
 
 The country needs at least $3 trillion more to cover all expenditures and some portions of the annual deficit. In order to continue supporting the country's healthcare system, there needs to be a review and a revision to the tax system in order to better distribute resources to people who need support and to continue protect and look after this country. 
         
-'''))]),
+""")
+                        )
+                    ],
+                ),
                 dcc.Tab(
                     label="Questions & Answers",
                     children=[
@@ -262,9 +281,8 @@ Source(s): [Understanding Stock Price and Value](https://www.investopedia.com/ar
                 ),
             ]
         ),
-    
+    ]
 )
-])
 
 if __name__ == "__main__":
     app.run(debug=True)
