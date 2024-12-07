@@ -12,7 +12,7 @@ import plotly.express as px
 # Historical Inflation Rate
 
 #find out the inflation rate by year
-inflation_rate = pd.read_csv("../data/historical_inflation_rate_as_of_20241124_not_seasonally_adj.csv")
+inflation_rate = pd.read_csv("data/historical_inflation_rate_as_of_20241124_not_seasonally_adj.csv")
 inflation_rate["Month"] = inflation_rate["Label"].str[5:]
 
 
@@ -37,7 +37,7 @@ fig1.add_annotation(x=1973, y=20,
 
 
 #find out civilian labor force participation rate
-labor_force_participation = pd.read_csv("../data/seasonally_adjusted_labor_force_participation_rate_as_of_20241124.csv")
+labor_force_participation = pd.read_csv("data/seasonally_adjusted_labor_force_participation_rate_as_of_20241124.csv")
 labor_force_participation["Month"] = labor_force_participation["Label"].str[5:]
 
 
@@ -52,7 +52,7 @@ fig2.add_annotation(x=1940, y=60,
 #Employment-Population Ratio
 
 
-employed_rate = pd.read_csv("../data/Employment_Population_Ratio_as_of_20241201_seasonally_adj.csv")
+employed_rate = pd.read_csv("data/Employment_Population_Ratio_as_of_20241201_seasonally_adj.csv")
 employed_rate["Month"] = employed_rate["Label"].str[5:]
 
 fig3 = px.line(employed_rate, x="Year", y="Value", 
@@ -66,7 +66,7 @@ fig3.add_annotation(x=1940, y=58,
 
 
 # find out unemployment rate
-unemployment_rate = pd.read_csv("../data/seasonally_adjusted_unemployment_rate_as_of_20241124.csv")
+unemployment_rate = pd.read_csv("data/seasonally_adjusted_unemployment_rate_as_of_20241124.csv")
 unemployment_rate["Month"] = unemployment_rate["Label"].str[5:]
 
 fig4 = px.line(unemployment_rate, x="Year", y="Value", 
@@ -94,7 +94,7 @@ fig5 = px.line(labor_force_participation, x="Year", y="Not in Labor Force",
 
 
 #find out healthcare costs by year
-healthcare_cost_cpi = pd.read_csv("../data/medical_care_cpi_not_seasonally_adjusted_as_of_20241124.csv")
+healthcare_cost_cpi = pd.read_csv("data/medical_care_cpi_not_seasonally_adjusted_as_of_20241124.csv")
 healthcare_cost_cpi["Month"] = healthcare_cost_cpi["Label"].str[5:]
 
 
@@ -166,7 +166,7 @@ fig7.update_yaxes(title="Percent (%)")
 
 #get the actual medical cost in today's dollars -- 2024 -- using c(new) = c(old) * (1+M/100)
 
-medical_cost_table = pd.read_excel("../data/medical_inflation_table.xlsx")
+medical_cost_table = pd.read_excel("data/medical_inflation_table.xlsx")
 medical_cost_table["Year"] = medical_cost_table["Label"].str[:5]
 medical_cost_table["$100_out-of-pocket_w/o_inflation_adj"] = medical_cost_table["$100_out-of-pocket_w/o_inflation_adj"].round(2)
 
@@ -175,7 +175,7 @@ fig8 = px.line(medical_cost_table, x="Year", y="$100_out-of-pocket_w/o_inflation
                  hover_name="Label",
               title = "$100 out-of-pocket medical cost without inflation rate adj")
 
-personal_income = pd.read_csv("../data/Personal_Income_Median_US_AH_20241205.csv")
+personal_income = pd.read_csv("data/Personal_Income_Median_US_AH_20241205.csv")
 personal_income["Current US Dollars"] = personal_income["MEPAINUSA646N"]
 
 fig9 = px.line(personal_income, x="DATE", y="Current US Dollars", title = 'Median Personal Income Beginning in 1974 <br><sup>Source: <a href="https://fred.stlouisfed.org/series/MEPAINUSA646N">Federal Reserve - St. Louis (fred.stlouisfed.org) Median Personal Income in the United States</a></sup>')
