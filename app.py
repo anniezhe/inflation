@@ -18,7 +18,7 @@ EXPLAINER = """Most people live in a delicate balance between income, saving for
 
 app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-app.layout = dbc.Container(
+app.layout = html.Div(dbc.Container(
     [
         html.H1("Inflation and Healthcare Costs"),
         html.H3(dcc.Markdown("By: [Annie He](https://www.anniezhe.com)")),
@@ -264,7 +264,7 @@ Source(s): [Understanding Stock Price and Value](https://www.investopedia.com/ar
         ),
     ]
 )
-
+)
 
 if __name__ == "__main__":
     app.run_server()
