@@ -10,7 +10,7 @@ server = app.server
 ##Descriptions
 EXPLAINER = """Most people live in a delicate balance between income, saving for retirement, 
     if any, and spending for basic services such as food, clothing, housing, utilities, and medical care. 
-    Inflation, as it refers to prices everyone pays for the basics of living, catches the attention of 
+    Inflation, as it refers to prices that we all pay for the basics of living, catches the attention of 
     everyone except for the wealthy 1% or 2%. Persistent price inflation above 2% to 3% can 
     cause people to change their standard of living in their choices of food, clothing, medical care, 
     and housing affordability. The goal is to explore the relationship between the inflation rate and 
@@ -30,7 +30,7 @@ app.layout = dbc.Container(
                     children=[
                         html.P(
                             dcc.Markdown(
-                                "The following data from the Bureau of Labor Statistics (BLS) will be used to perform basic analysis on the US inflation and healthcare costs. All data collection procedures for the list below are performed by the BLS. For each data, all available years will be reviewed to identify any significant differences. Research on each significance that is identified will use past news reports and government and universities staff's work for sources. **Please note that this dashboard will have all data on or before October 2024.**"
+                                "The following data from the Bureau of Labor Statistics (BLS) will be used to perform basic analysis on US inflation and healthcare costs. All data collection procedures for the list below are performed by the BLS. For each data, all available years will be reviewed to identify any significant differences. Research on each difference that is identified will use past news reports, government, and universities staff's work for sources. **Please note that this dashboard website will have all data on or before October 2024.**"
                             )
                         ),
                         html.Ul(
