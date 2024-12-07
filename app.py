@@ -147,7 +147,7 @@ Source(s):
                         dcc.Graph(figure=inflation_healthcare.fig9, responsive=True),
                         html.P(
                             dcc.Markdown("""
-In 2023, the median personal income is about $42,000. According to the [US Bureau of Economic Analysis (BEA)'s Personal Income](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*9tge84*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzQ1Mzc5My45LjEuMTczMzQ1MzgzNy4xNi4wLjA.#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI1OCJdXX0=), the country amassed $23.8 trillion dollar in 2023. 
+In 2023, the median personal income is about $42,000. According to the [US Bureau of Economic Analysis (BEA)'s Personal Income](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*9tge84*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzQ1Mzc5My45LjEuMTczMzQ1MzgzNy4xNi4wLjA.#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI1OCJdXX0=), the country amassed $23.8 trillion dollars in 2023. 
 
 """)
                         ),
