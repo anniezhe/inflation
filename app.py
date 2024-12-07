@@ -1,7 +1,7 @@
 from dash import Dash, dcc, html
 import dash_bootstrap_components as dbc
 import dash
-import pyfile.inflation_healthcare as inflation_healthcare
+import file.inflation_healthcare as inflation_healthcare
 
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
@@ -267,4 +267,4 @@ Source(s): [Understanding Stock Price and Value](https://www.investopedia.com/ar
 
 
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run(debug=True)
