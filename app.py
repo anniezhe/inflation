@@ -99,15 +99,15 @@ app.layout = dbc.Container(
                             dcc.Markdown(
                                 """ In the 1930s, patients had to cover all medical expenses -- mainly house visits by doctors, castor oil, and tonsillectomies -- out-of-pocket. Low cost hospitals existed but these places during the 19th century were "a place to be sick and die". The idea 
                                 of a private health insurance didn't take off until World War II. Medicare and Medicaid didn't exist until 1965. Out-of-pocket before 
-                                  1933 meant gold. After 1933, out-of-pocket meant paper money backed with gold, because
+                                  1933 meant paper money backed with gold. After 1933, out-of-pocket meant paper money for domestic transactions, because
                                    people hoarded gold and deflation reached 10% during the Great Depression, which the Great Depression lasted from 1929 to 1941. During that time, 
                                    the BLS worked with other federal agencies to collect data on consumers' purchases to identify consumption estimates for urban and rural areas across the country including medical care. 
-                                   Eventually, the US couldn't afford to continue using gold for goods and services, so the country turned to paper money backed with gold.
+                                   
                                    
                                    
 In World War II, which lasted from 1939-1945, private insurance industry grew faster so did the desire to have better healthcare coverage for those who were not employed as a civilian or who couldn't afford a private health insurance. 
 US government eventually heed people's call in 1965 with the establishment of Medicare and Medicaid after series of long and bitter arguments about how to best support the country and allowing lots of opportunities to choose and to make money.
-Medicare, as we know it today, is a health insurance program for the elderly. Medicaid is a health insurance program for people who have limited income. In 1973, the US ended using gold to support the dollar, because the demand for dollar kept increasing.
+Medicare, as we know it today, is a health insurance program for the elderly. Medicaid is a health insurance program for people who have limited income. In 1973, the US ended the international convertability for gold-paper money, because the demand for dollar kept increasing.
 Around that same time, the country experienced great inflation, which started in 1965, where everything including medical care became more expensive thanks to drastic oil price increase from OPEC, a cartel led by Saudi Arabia, failure to continue supporting paper money with gold, and an inadequate metric to 
 measure the US economy called the Philips Curve. Chairman Paul Volcker issued series of policies to bring inflation down. Although the road to recovery was painful (2 recessions between 1980 and 1982), Chairman Volcker's policies worked. The Great Inflation ended in 1982.  
 
