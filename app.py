@@ -14,7 +14,7 @@ EXPLAINER = """Most people live in a delicate balance between income, saving for
     everyone except for the wealthy 1% or 2%. Persistent price inflation above 2% to 3% can 
     cause people to change their standard of living in their choices of food, clothing, medical care, 
     and housing affordability. The goal is to explore the relationship between the inflation rate and 
-    the healthcare cost published by the US Bureau of Labor Statistics."""
+    the healthcare costs published by the US Bureau of Labor Statistics."""
 
 
 
@@ -186,15 +186,15 @@ Below is the graph showing what the $100 cost from 1974 would look like as time 
                         html.P(
                             dcc.Markdown("""
 The "Report" and "Demo" tabs point to a continuous need to support the country's healthcare system and to improve the system. Recent records of the country's income were reviewed. Below are additional findings.
-* In 2024, the US Bureau of Economic Analysis (BEA) reported $5.1 trillion in income for federal level, but its current expenditure is about $7 trillion. It's on the path to spend $9.7 trillion for FY 2024 according to [USASpending.gov](https://www.usaspending.gov/).
-* From BEA's report, the taxes on corporate income is noticeably low from the federal's perspective, which is about $483 billion for 2024. The overall (meaning from the federal, state, and local governments combined) is $647 billion.
+* In 2024, the US Bureau of Economic Analysis (BEA) reported $5.1 trillion in annual income for the federal government, but its current annual expenditure is about $7 trillion. It's on the path to spend $9.7 trillion for FY 2024 according to [USASpending.gov](https://www.usaspending.gov/). Interest costs for borrowing are now a major budget item.
+* From BEA's report, the tax on corporate income is noticeably low from the federal's perspective, which is about $483 billion for 2024. The overall (meaning from the federal, state, and local governments combined) corporate tax is $647 billion.
 * More information for the previous two bullets can be found from the [BEA's Government Current Receipts and Expenditures](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*s3gg1p*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzUwODI5OS4xMC4xLjE3MzM1MDg5NDcuNjAuMC4w#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJDYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI4NiJdXX0=) and the [BEA's Federal Government Current Receipts and Expenditures](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*s3gg1p*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzUwODI5OS4xMC4xLjE3MzM1MDg5NDcuNjAuMC4w#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI4NyJdXX0=).
 * The [US Treasury](https://fiscaldata.treasury.gov/americas-finance-guide/national-deficit/) currently reports $1.83 trillion in total deficit for FY2024, and it is continuing to rise.
 * For FY 2023, the [IRS](https://www.irs.gov/statistics/soi-tax-stats-irs-data-book) reported $456 billion in taxes from business income whereas individual income was $2.5 trillion and others (employment, estate and gift, and excise taxes) reported $1.6 trillion. 
-* One major reason why is the list of all deductions on [Form 1120](https://www.irs.gov/pub/irs-pdf/f1120.pdf) and [business tax credits that any businesses can claim](https://www.irs.gov/credits-deductions/businesses). Any businesses can use all of them for each tax year as long as they fulfill all the requirements when filing a tax return. 
+* One major reason why businesses pay low taxes is the list of all deductions on [Form 1120](https://www.irs.gov/pub/irs-pdf/f1120.pdf) and [business tax credits that any businesses can claim](https://www.irs.gov/credits-deductions/businesses). Any businesses can use all of them for each tax year as long as they fulfill all the requirements when filing a tax return. 
 * IRS reported on [its website](https://www.irs.gov/newsroom/the-tax-gap) that roughly 87% of taxes were paid for tax years 2014-2016, which meant 13% of the taxes were still not paid. 
 
-The country needs at least $3 trillion more to cover all expenditures and some portions of the annual deficit. In order to continue supporting the country's healthcare system, there needs to be a review and a revision to the tax system in order to better distribute resources to people who need support and to continue protect and look after this country. 
+The country needs at least $3 trillion more to cover all expenditures and some portions of the annual deficit. In order to continue supporting the country's healthcare system, food aid, etc., there needs to be a review and a revision to the tax system in order to better distribute resources to people who need support and to continue protect and look after this country. 
         
 """)
                         )
