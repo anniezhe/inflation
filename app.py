@@ -162,7 +162,7 @@ In 2023, the median personal income is about $42,000. According to the [US Burea
                         dcc.Graph(figure=inflation_healthcare.fig5, responsive=True),
                         html.P(
                             dcc.Markdown("""
-The "Civilian Not in Labor Force" graph represents people who are not eligible to be in the labor force -- people who are younger than 16 years old -- or who decided to not be in the labor force for multitude of reasons, **which are completely different from the unemployment rate graph**.
+The "Civilian Not in Labor Force" graph represents people who have decided to not be in the labor force for multitude of reasons, **which are completely different from the unemployment rate graph**.
 """)
                         ),
                     ],
