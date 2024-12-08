@@ -97,62 +97,29 @@ app.layout = dbc.Container(
                         dcc.Graph(figure=inflation_healthcare.fig6, responsive=True),
                         html.P(
                             dcc.Markdown(
-                                """ In the 1930s, patients had to cover all medical expenses -- mainly house visits by doctors, castor oil, and tonsillectomies -- out-of-pocket. Low cost hospitals existed but these places during the 19th century were "a place to be sick and die". The idea 
-                                of a private health insurance didn't take off until World War II. Medicare and Medicaid didn't exist until 1965. Out-of-pocket before 
-                                  1933 meant paper money backed with gold. After 1933, out-of-pocket meant paper money for domestic transactions, because
-                                   people hoarded gold and deflation reached 10% during the Great Depression, which the Great Depression lasted from 1929 to 1941. During that time, 
-                                   the BLS worked with other federal agencies to collect data on consumers' purchases to identify consumption estimates for urban and rural areas across the country including medical care. 
-                                   
-                                   
-                                   
-In World War II, which lasted from 1939-1945, private insurance industry grew faster so did the desire to have better healthcare coverage for those who were not employed as a civilian or who couldn't afford a private health insurance. 
-US government eventually heed people's call in 1965 with the establishment of Medicare and Medicaid after series of long and bitter arguments about how to best support the country and allowing lots of opportunities to choose and to make money.
-Medicare, as we know it today, is a health insurance program for the elderly. Medicaid is a health insurance program for people who have limited income. In 1973, the US ended the international convertability for gold-paper money, because the demand for dollar kept increasing.
-Around that same time, the country experienced great inflation, which started in 1965, where everything including medical care became more expensive thanks to drastic oil price increase from OPEC, a cartel led by Saudi Arabia, failure to continue supporting paper money with gold, and an inadequate metric to 
-measure the US economy called the Philips Curve. Chairman Paul Volcker issued series of policies to bring inflation down. Although the road to recovery was painful (2 recessions between 1980 and 1982), Chairman Volcker's policies worked. The Great Inflation ended in 1982.  
-
-
-Source(s):
-* [BLS's Chapter 16 Consumer Expenditures and Income](https://www.bls.gov/opub/hom/pdf/cex-20110915.pdf)
-* [Federal Reserve History's Essay on The Great Inflation](https://www.federalreservehistory.org/essays/great-inflation#:~:text=The%20Great%20Inflation%20was%20the%20defining%20macroeconomic%20period,policies%20of%20the%20Fed%20and%20other%20central%20banks.)
-* [When Harry Truman Pushed for Universal Health Care](https://www.history.com/news/harry-truman-universal-health-care)
-* [Federal Reserve History's Essay on the Great Depression](https://www.federalreservehistory.org/essays/great-depression)
-* [Federal Reserve Bank - St. Louis's Article: Here’s Why the U.S. No Longer Follows a Gold Standard](https://www.stlouisfed.org/open-vault/2017/november/why-us-no-longer-follows-gold-standard)
-* [BLS's Why This Counts: Medical Care Services in the CPI](https://www.bls.gov/blog/2015/why-this-counts-medical-care-services-in-the-cpi.htm)
-* [Social Security Office of Retirement and Disability Policy's Health Insurance and Health Services](https://www.ssa.gov/policy/docs/progdesc/sspus/health-insurance-and-health-services.html)
-* [HISTORY.com's World War II](https://www.history.com/topics/world-war-ii/world-war-ii-history)  
-* [Brief History of Gold Standard in the United States](https://crsreports.congress.gov/product/pdf/R/R41887)
-* [AMA Journal of Ethics: An Architectural History of US Community Hospitals](https://journalofethics.ama-assn.org/article/architectural-history-us-community-hospitals/2019-03)                                 """
+                                """ 
+                                 """
                             )
                         ),
                         dcc.Graph(figure=inflation_healthcare.fig7, responsive=True),
                         html.P(
                             dcc.Markdown("""
-Post 1973 US currency change, the medical landscape was in the middle of implementing a new health insurance from the Health Maintenance Organization Act to 
-encourage proactiveness in maintaining one's health and to combat soaring healthcare costs. It worked eventually in the mid-1990s, but it was not perfect. Patients and physicians saw
-that system as a major hinderance to full recovery because "treatment decisions were being taken from their hands and their clinical 
-judgements were being second-guessed". The health spending during the late 1980s and early 1990s increased rapidly because of "expensive new medical technologies and curtailing ambitious HMO-promoting programs".
-Prior to 2008, there were 45 million uninsured Americans. After the Affordable Care Act was passed, 92% of Americans in 2023 had health insurance. In 2020, COVID-19 pandemic hit, which badly affected everything from 
-getting supplies to unemployment to the nation's health. Health wise, the country got out of COVID-19 thanks to modern technological advancement in vaccines. In other aspects, the country is still dealing with the
-aftermath of constricting supply lines during the COVID-19 pandemic (constricting supply lines leads to the need for hiring more people and increasing prices for products) and unsustainable increases for employment.
-The aftermath is a sticky inflation, 2.6% in October 2024 and 2.4% in September 2024, which are not within the Federal Reserve Board's 2% inflation target. 2% inflation target would lead to achieving price stability.
-                                            
-Source(s):
-* [AMA Journal of Ethics: The US Health Care Non-System, 1908-2008](https://journalofethics.ama-assn.org/article/us-health-care-non-system-1908-2008/2008-05)
-* [An Architectural History of US Community Hospitals](https://journalofethics.ama-assn.org/article/architectural-history-us-community-hospitals/2019-03)
-* [Health Insurance Coverage in the United States: 2023](https://www.census.gov/library/publications/2024/demo/p60-284.html)
-* [BLS's What caused the high inflation during the COVID-19 period?](https://www.bls.gov/opub/mlr/2023/beyond-bls/what-caused-the-high-inflation-during-the-covid-19-period.htm)
-* [Federal Reserve Board's Statement on Longer-Run Goals and Monetary Policy Strategy](https://www.federalreserve.gov/monetarypolicy/files/FOMC_LongerRunGoals_202008.pdf) """)
+ """)
                         ),
                         dcc.Graph(figure=inflation_healthcare.fig9, responsive=True),
                         html.P(
                             dcc.Markdown("""
-In 2023, the median personal income is about $42,000. According to the [US Bureau of Economic Analysis (BEA)'s Personal Income](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*9tge84*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzQ1Mzc5My45LjEuMTczMzQ1MzgzNy4xNi4wLjA.#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI1OCJdXX0=), the country amassed $23.8 trillion dollars in 2023. 
+
 
 """)
                         ),
+                        dcc.Graph(figure=inflation_healthcare.fig10, responsive=True),
+                        dcc.Graph(figure=inflation_healthcare.fig11, responsive=True),
                         dcc.Graph(figure=inflation_healthcare.fig2, responsive=True),
                         dcc.Graph(figure=inflation_healthcare.fig3, responsive=True),
+                        dcc.Graph(figure=inflation_healthcare.fig12, responsive=True),
+                        dcc.Graph(figure=inflation_healthcare.fig13, responsive=True),
+                        dcc.Graph(figure=inflation_healthcare.fig14, responsive=True),
                         dcc.Graph(figure=inflation_healthcare.fig4, responsive=True),
                         html.P(
                             dcc.Markdown(
@@ -186,15 +153,15 @@ Below is the graph showing what the $100 cost from 1974 would look like as time 
                         html.P(
                             dcc.Markdown("""
 The "Report" and "Demo" tabs point to a continuous need to support the country's healthcare system and to improve the system. Recent records of the country's income were reviewed. Below are additional findings.
-* In 2024, the US Bureau of Economic Analysis (BEA) reported $5.1 trillion in annual income for the federal government, but its current annual expenditure is about $7 trillion. It's on the path to spend $9.7 trillion for FY 2024 according to [USASpending.gov](https://www.usaspending.gov/). Interest costs for borrowing are now a major budget item.
-* From BEA's report, the tax on corporate income is noticeably low from the federal's perspective, which is about $483 billion for 2024. The overall (meaning from the federal, state, and local governments combined) corporate tax is $647 billion.
-* More information for the previous two bullets can be found from the [BEA's Government Current Receipts and Expenditures](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*s3gg1p*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzUwODI5OS4xMC4xLjE3MzM1MDg5NDcuNjAuMC4w#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJDYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI4NiJdXX0=) and the [BEA's Federal Government Current Receipts and Expenditures](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*s3gg1p*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzUwODI5OS4xMC4xLjE3MzM1MDg5NDcuNjAuMC4w#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI4NyJdXX0=).
+* In 2024, the US Bureau of Economic Analysis (BEA) reported $5.1 trillion in annual income for the federal government, but its current annual expenditure is about $7 trillion. It's on the path to spend $9.7 trillion for FY 2024 according to [USASpending.gov](https://www.usaspending.gov/). Interest costs for borrowing are now a major budget item. More information can be found from the [BEA's Government Current Receipts and Expenditures](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*s3gg1p*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzUwODI5OS4xMC4xLjE3MzM1MDg5NDcuNjAuMC4w#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJDYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI4NiJdXX0=) and the [BEA's Federal Government Current Receipts and Expenditures](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*s3gg1p*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzUwODI5OS4xMC4xLjE3MzM1MDg5NDcuNjAuMC4w#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI4NyJdXX0=).
+* From BEA's report, the tax on corporate income is noticeably low from the federal's perspective, which is about $483 billion for 2024. The overall (meaning from the federal, state, and local governments combined) corporate tax is $647 billion. More information can be found from the [BEA's Government Current Receipts and Expenditures](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*s3gg1p*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzUwODI5OS4xMC4xLjE3MzM1MDg5NDcuNjAuMC4w#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJDYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI4NiJdXX0=) and the [BEA's Federal Government Current Receipts and Expenditures](https://apps.bea.gov/iTable/?reqid=19&step=2&isuri=1&categories=survey&_gl=1*s3gg1p*_ga*MTYxOTk1NTUzNy4xNzMxMDAzMzAy*_ga_J4698JNNFT*MTczMzUwODI5OS4xMC4xLjE3MzM1MDg5NDcuNjAuMC4w#eyJhcHBpZCI6MTksInN0ZXBzIjpbMSwyLDNdLCJkYXRhIjpbWyJjYXRlZ29yaWVzIiwiU3VydmV5Il0sWyJOSVBBX1RhYmxlX0xpc3QiLCI4NyJdXX0=).
 * The [US Treasury](https://fiscaldata.treasury.gov/americas-finance-guide/national-deficit/) currently reports $1.83 trillion in total deficit for FY2024, and it is continuing to rise.
-* For FY 2023, the [IRS](https://www.irs.gov/statistics/soi-tax-stats-irs-data-book) reported $456 billion in taxes from business income whereas individual income was $2.5 trillion and others (employment, estate and gift, and excise taxes) reported $1.6 trillion. 
+* For FY 2023, the [IRS](https://www.irs.gov/statistics/soi-tax-stats-irs-data-book) reported $456 billion in taxes from business income whereas individual income was $2.5 trillion and others (employment, estate and gift, and excise taxes) reported $1.6 trillion.
+* At the end of FY 2023, which is July 2023, US corporations reported a profit of $3.5 trillion dollars.
 * One major reason why businesses pay low taxes is the list of all deductions on [Form 1120](https://www.irs.gov/pub/irs-pdf/f1120.pdf) and [business tax credits that any businesses can claim](https://www.irs.gov/credits-deductions/businesses). Any businesses can use all of them for each tax year as long as they fulfill all the requirements when filing a tax return. 
 * IRS reported on [its website](https://www.irs.gov/newsroom/the-tax-gap) that roughly 87% of taxes were paid for tax years 2014-2016, which meant 13% of the taxes were still not paid. 
 
-The country needs at least $3 trillion more to cover all expenditures and some portions of the annual deficit. In order to continue supporting the country's healthcare system, food aid, etc., there needs to be a review and a revision to the tax system in order to better distribute resources to people who need support and to continue protect and look after this country. 
+The country needs at least $3 trillion more to cover all expenditures and some portions of the annual deficit. In order to continue supporting the country's healthcare system, food aid, etc., there needs to be a review and a revision to the tax system in order to better distribute resources to people who need support and to continue protect and look after this country. It's strongly recommended to vote on all elections (presidential, midterm, and local) to push the country towards desired results.
         
 """)
                         )

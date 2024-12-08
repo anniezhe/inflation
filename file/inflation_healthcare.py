@@ -175,9 +175,33 @@ fig8 = px.line(medical_cost_table, x="Year", y="$100_out-of-pocket_w/o_inflation
                  hover_name="Label",
               title = "$100 out-of-pocket medical cost without inflation rate adj")
 
-personal_income = pd.read_csv("data/Personal_Income_Median_US_AH_20241205.csv")
-personal_income["Current US Dollars"] = personal_income["MEPAINUSA646N"]
+#get personal income
+personal_income_US = pd.read_csv("data/PI.csv")
+personal_income_US["Billions of Dollars"] = personal_income_US["PI"]
+fig9 = px.line(personal_income_US, x="DATE", y="Billions of Dollars", title='Personal Income in US in Billions of Dollars <br><sup>Source: <a href= "https://fred.stlouisfed.org/seriesBeta/PI">Federal Reserve Bank - St.Louis Branch Personal Income</a></sup>')
 
-fig9 = px.line(personal_income, x="DATE", y="Current US Dollars", title = 'Median Personal Income Beginning in 1974 <br><sup>Source: <a href="https://fred.stlouisfed.org/series/MEPAINUSA646N">Federal Reserve - St. Louis (fred.stlouisfed.org) Median Personal Income in the United States</a></sup>')
+personal_outlays_US = pd.read_csv("data/Personal_Outlays_AH_20241208.csv")
+personal_outlays_US["Billions of Dollars"] = personal_outlays_US["A068RC1"]
+fig10 = px.line(personal_outlays_US, x="DATE", y="Billions of Dollars", title='Personal Outlays in Billions of Dollars <br><sup>Source: <a href="https://fred.stlouisfed.org/seriesBeta/A068RC1">Federal Reserve Bank - St.Louis Branch Personal Outlays</a></sup>')
 
+US_corporate_profit = pd.read_csv("data/CPROFIT.csv")
+US_corporate_profit["Billions of Dollars"] = US_corporate_profit["CPROFIT"]
+fig11 = px.line(US_corporate_profit, x="DATE", y="Billions of Dollars", title='US Corporate Profits w/ Inventory and Capital Consumption Adjustments <br><sup>Source: <a href="https://fred.stlouisfed.org/seriesBeta/CPROFIT">Federal Reserve Bank - St.Louis Corporate Profits w/ Inventory and Capital Consumption Adjs</a></sup>')
+
+#get mean and median income from FRED
+mean_personal_income = pd.read_csv("data/Mean_Personal_Income_US_AH_20241208.csv")
+mean_personal_income2 = mean_personal_income.rename({"MAPAINUSA646N":"Avg Personal income in Current Dollars"}, axis='columns')
+fig12 = px.line(mean_personal_income2, x="DATE", y="Avg Personal income in Current Dollars", title = 'Average Personal Income in the US in Current Dollars <br> <sup><a href = "https://fred.stlouisfed.org/seriesBeta/MAPAINUSA646N">Federal Reserve Bank - St.Louis Mean Personal Income in the US</a></sup>')
+
+median_personal_income=pd.read_csv("data/Personal_Income_Median_US_AH_20241205.csv")
+median_personal_income2 = median_personal_income.rename({"MEPAINUSA646N":"Median Personal Income in Current Dollars"}, axis='columns')
+fig13 = px.line(median_personal_income2, x="DATE", y="Median Personal Income in Current Dollars", title = 'Median Personal Income in the US in Current Dollars <br><sup><a href = "https://fred.stlouisfed.org/seriesBeta/MEPAINUSA646N">Federal Reserve Bank St.Louis - Median Personal Income in the US</a></sup>')
+
+mean_personal_income2.set_index('DATE', inplace=True)
+median_personal_income2.set_index('DATE', inplace=True)
+
+mean_median_personal_income_US = pd.concat([mean_personal_income2, median_personal_income2], axis=1)
+mean_median_personal_income_US.reset_index(inplace=True)
+fig14 = px.line(mean_median_personal_income_US, x="DATE", y=mean_median_personal_income_US.columns[1:], title="Historical Comparison Between Average Personal Income and Median Personal Income")
+fig14.update_yaxes(title="Current Dollars")
 # %%
