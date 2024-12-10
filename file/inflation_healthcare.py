@@ -153,7 +153,7 @@ medical_cost_inflation_rate_table["Year"] = medical_cost_inflation_rate_table["L
 
 
 
-fig7 = px.line(medical_cost_inflation_rate_table, x="Year", y=medical_cost_inflation_rate_table.columns[1:],title="Medical Care Cost Rate vs Inflation Rate 1974 and Onwards", hover_name="Label")
+fig7 = px.line(medical_cost_inflation_rate_table, x="Year", y=medical_cost_inflation_rate_table.columns[1:],title="Medical Care Cost Rate vs Inflation Rate 1974 - 2024", hover_name="Label")
 fig7.update_yaxes(title="Percent (%)")
 
 
