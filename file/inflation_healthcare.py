@@ -27,7 +27,7 @@ fig1 = px.line(inflation_rate, x="Year", y="12-Month % Change",
 fig1.add_annotation(x=1900,
             text="1913: BLS's first piece <br> of data available.", showarrow=False)
 fig1.add_annotation(x=1973, y=20,
-            text="1973: Using gold to back paper money ended. <br> Switched to Fiat money.", showarrow=False)
+            text="1971: Using gold to back paper money ended. <br> Switched to Fiat money.", showarrow=False)
 
 
 
@@ -108,7 +108,7 @@ fig6 = px.line(healthcare_cost_cpi, x="Year", y="12-Month % Change",
 fig6.add_annotation(x=1936, y=10,
             text="1936: BLS's first piece of data available.", showarrow=False)
 fig6.add_annotation(x=1973, y=20,
-            text="1973: Using gold to back paper money ended. <br> Switched to Fiat money.", showarrow=False)
+            text="1971: Using gold to back paper money ended. <br> Switched to Fiat money.", showarrow=False)
 
 
 #Medical Care Cost Rate vs Inflation Rate
