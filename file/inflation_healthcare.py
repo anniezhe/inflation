@@ -26,8 +26,6 @@ fig1 = px.line(inflation_rate, x="Year", y="12-Month % Change",
 
 fig1.add_annotation(x=1900,
             text="1913: BLS's first piece <br> of data available.", showarrow=False)
-fig1.add_annotation(x=1933, y=16,
-            text="1933: Classic Gold <br> Standard ended.", showarrow=False)
 fig1.add_annotation(x=1973, y=20,
             text="1973: Using gold to back paper money ended. <br> Switched to Fiat money.", showarrow=False)
 
