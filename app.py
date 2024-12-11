@@ -95,24 +95,113 @@ app.layout = dbc.Container(
                     children=[
                         dcc.Graph(figure=inflation_healthcare.fig1, responsive=True),
                         dcc.Graph(figure=inflation_healthcare.fig6, responsive=True),
-                        html.P(
-                            dcc.Markdown(
-                                """ 
-                                 """
-                            )
-                        ),
                         dcc.Graph(figure=inflation_healthcare.fig7, responsive=True),
-                        html.P(
-                            dcc.Markdown("""
- """)
-                        ),
+                        html.H5("Below is a list of important events related to inflation and healthcare costs to better understand people's financial situation related to healthcare and the efforts being made to support them."),
+                        dbc.Accordion(
+        [
+            dbc.AccordionItem(
+                dcc.Markdown('''
+* The year 1929 marked the beginning of the Great Depression era. 
+The Baylor Plan was established to help people afford hospital care. It was the country’s very first prepaid hospital insurance plan.      
+* Unemployment rate reached 22.9% in 1932 and 12.5% in 1938. Deflation reached 9.8% also in 1932. Hospitals provided free services for people who lost their income but were struggling to financially support its operations and its staff. Drastic measures were taken to continue providing free services to unemployed people. 
+* The Bureau of Labor Statistics (BLS) worked with four other federal agencies to collect data on the nation’s well-being from 1935 to 1936. The first piece of BLS data for medical care cost was available in 1936.
+* In 1939, in an attempt to strengthen the Social Security Act, which was passed in 1935, President Franklin Roosevelt revised it so that not only workers’ spouses and children will receive benefits, but also people could receive their benefits as promised earlier.
+* The Great Depression ended when World War II began. The Roosevelt’s administration ended on April 12, 1945, when the President died from a cerebral hemorrhage. Roosevelt’s Vice President, Harry S. Truman, took over as the new President.
+
+                             
+Source(s): [BLS's Chapter 16 Consumer Expenditures and Income](https://www.bls.gov/opub/hom/pdf/cex-20110915.pdf),
+[Life and Death During the Great Depression](https://www.pnas.org/doi/epdf/10.1073/pnas.0904491106),
+[Medical Care During the Depression](https://pmc.ncbi.nlm.nih.gov/articles/PMC2690273/),
+[Why Social Security Was the Cornerstone of FDR’s New Deal]( https://www.history.com/news/social-security-history-fdr-new-deal),
+[Franklin D. Roosevelt](https://www.whitehouse.gov/about-the-white-house/presidents/franklin-d-roosevelt/),
+[Baylor Scott & White’s “A Moment in History”](https://blog.bswhealth.med/a-moment-in-history/#:~:text=The%20%E2%80%9CBaylor%20Plan%E2%80%9D%20was%20established%20in%201929%20by,the%20United%20States%20and%20predecessor%20of%20Blue%20Cross),
+[HISTORY.com's World War II](https://www.history.com/topics/world-war-ii/world-war-ii-history)  
+'''), title="1929 to 1940: Great Depression"
+            ),
+            dbc.AccordionItem(
+                dcc.Markdown('''
+* The idea to establish a national healthcare program was born from President Truman’s experience when he was enlisted in the army to fight in World War I. Truman noticed that many men were deemed unfit for army enlistment. The archivist at the Harry S. Truman Presidential Library and Museum said, “He `[President Truman]` felt it was a reflection of inadequate health care for parts of the population”.
+* When Truman became President, he expressed an urgent need to establish a universal health care system where all medical costs were paid from a payroll tax. That idea was not received well, because it was thought to be too expensive. The federal individual income tax rate for 1946 and 1947 was 20% if a person made anywhere more than $0 but less than $2000. 22% if a person made anywhere more than $2000 but less than $4000. 26% if a person made anywhere more than $4000 but less than $6000.
+* In 1947, which was two years after the World War II ended, McCarthyism took hold of the country with its claims that there were perpetrators who desired to replace democracy with communism. Some people thought that the idea of universal healthcare aligned with communist values.
+* Although the universal healthcare bill died, the Hill Burton Act was passed in 1946 to provide federal funds to build hospitals, which was why medical costs spiked between 1946 and 1947. 
+* In 1950, BLS collected data only from urban consumers. In 1953, Truman’s administration ended with little success on its national healthcare initiatives. From 1960 to 1961, BLS collected another set of data on the nation’s wellbeing, which was why some pieces of data were missing in the medical care cost graph.
+* In 1965, President Lyndon B. Johnson signed Medicare and Medicaid Act into law.
+                             
+
+Source(s): [Harry S. Truman](https://www.whitehouse.gov/about-the-white-house/presidents/harry-s-truman/),
+[The Challenge of National Healthcare](https://www.trumanlibrary.gov/education/presidential-inquiries/challenge-national-healthcare),
+[When Harry Truman Pushed for Universal Health Care](https://www.history.com/news/harry-truman-universal-health-care),
+[Red Scare]( https://www.history.com/topics/cold-war/red-scare),
+[Federal Individual Income Tax Rates History]( https://files.taxfoundation.org/legacy/docs/fed_individual_rate_history_nominal.pdf),
+[BLS's Chapter 16 Consumer Expenditures and Income](https://www.bls.gov/opub/hom/pdf/cex-20110915.pdf)
+'''), title="1945 to 1965: Struggle to Establish National Healthcare"
+            ),
+            dbc.AccordionItem(
+                dcc.Markdown('''
+* The Medicare and Medicaid programs became a major reason why there was an acceleration for the healthcare price rate. These programs together were the biggest purchasers for healthcare services.
+* The combination of the following was what brought the country into the Great Inflation period: 1) many other national initiatives along with Medicare and Medicaid programs, 2) being financially strained by the Vietnam War, 3) inability to support US dollar with gold as per global monetary agreement from post-World War II, and 4) repeated spikes in oil prices thanks to OPEC, a Saudi Arabia-led cartel. 
+* There were attempts to lower health care costs like passing the Health Maintenance Organization Act of 1973 to reduce hospital admissions and lengths of stay. 
+* The Nixon administration ended the gold standard in 1971 where the US dollar cannot be converted to gold anymore. The Nixon administration also used wage and price controls 3 times between 1971 and 1974 to end inflation; none of these attempts worked. 
+* The Ford administration developed the Whip Inflation Now (WIN) program, which also didn’t work.
+* The BLS started collecting data on the nation’s well being annually in 1979.
+* Chairman Paul Volcker increased interest rates and decreased the rate of money supply. Although Chairman Volcker’s strategy resulted with 2 recessions (one in 1980 and another in 1981), the inflation rate gradually decreased to under 5%. His strategy was necessary in order to bring down the country’s unacceptably high inflation rate.
+                             
+
+Source(s): [BLS's Chapter 16 Consumer Expenditures and Income]( https://www.bls.gov/opub/hom/pdf/cex-20110915.pdf),
+[Federal Reserve History's Essay on The Great Inflation](https://www.federalreservehistory.org/essays/great-inflation#:~:text=The%20Great%20Inflation%20was%20the%20defining%20macroeconomic%20period,policies%20of%20the%20Fed%20and%20other%20central%20banks),
+[The US Health Care Non-System, 1908-2008](https://journalofethics.ama-assn.org/article/us-health-care-non-system-1908-2008/2008-05)
+'''), title="1965 to 1982: Great Inflation"
+            ),
+            dbc.AccordionItem(
+                dcc.Markdown('''
+* Since 1973, health maintenance organization plans became popular among patients and hospitals. 
+* Later on, many other types of cost containment methods were introduced such as Prospective Payment Systems (PPS) for Medicare, preferred provider organizations (PPOs) also for managed care, and resource-based relative value scale (RBRVS) for physician services. 
+* In the early 1990s, health care spending increased at a rapid pace because of expensive new medical technologies. The link to see a list of new medical technologies is [here](https://www.mddionline.com/new-technologies/30-years-30-devices-1979-the-1980s-the-1990s-the-2000s-older-technologies).
+* Later on, many different types of cost containment methods were introduced such as Prospective Payment Systems (PPS) for Medicare, health maintenance organizations (HMOs) for managed care, preferred provider organizations (PPOs) also for managed care, and resource-based relative value scale (RBRVS) for physician services.
+* Hospital inpatient admissions declined by roughly 15%, and occupancy rates nationwide fell from 76% to 63% between 1980 and 1995. Morbidity associated with smallpox and polio were completely eliminated in 1990s thanks to vaccine developments from 1950s and 1960s. 
+
+                             
+Source(s):
+[The Changing Economics of Medical Technology](https://www.ncbi.nlm.nih.gov/books/NBK234316/),
+[Health Care in the 1990s: Changes in Health Care Delivery Models for Survival]( https://www.jognn.org/article/S0884-2175(15)33446-8/fulltext),
+[Achievements in Public Health, 1900-1999 Impact of Vaccines Universally Recommended for Children – United States, 1990-1998]( https://www.cdc.gov/mmwr/preview/mmwrhtml/00056803.htm)
+
+'''), title="1980s and 1990s: Modernizing Healthcare"
+            ),
+            dbc.AccordionItem(
+                dcc.Markdown('''
+* After the Affordable Care Act (ACA) became a law in 2008, more people began to sign up for health insurance plans that were created thanks to ACA. Between 2013 and 2023, the uninsured rate for all ages fell from 14.4% to 7.7%.
+* The rise of telemedicine, which began in the 1950s, where a “closed-circuit television link was established between the Nebraska Psychiatric Institute and Norfolk State Hospital for psychiatric consultations”, started to expand rapidly in the late 2010s. 
+* mRNA vaccines made the headlines during COVID-19 pandemic as saviors. mRNA vaccines were successfully developed after spending time since 1990s on solving the biggest challenge. The biggest challenge was that the initial version of mRNA quickly got destroyed in the body before reaching to the cells that were responsible for protecting and defending the human body.
+* On the flip side of the COVID-19 pandemic, hospital systems were overwhelmed due to sudden increase in hospital admissions. Prior to COVID-19, hospitals had already experienced strained capacity because of the rise of HMOs, doctor and nurse shortages,1997 Balanced Budget Act (BBA), and increasing cost for malpractice liability insurance.
+* Inflation also occurred during the COVID 19 pandemic. It was caused by “volatility of energy prices, backlogs of work orders for goods and services” thanks to supply chain issues, and “price changes in the auto-related industries”. 
+* Starting in March 2022, the Federal Reserve raised interest rates to combat inflation. In June 2022, inflation reached 9.1% thanks to Russia-Ukraine war and OPEC’s decision to cut back oil production in the early months of the COVID-19 pandemic. The Federal Reserve continued to raise interest rates until 2023.
+* The reason why inflation was painful even though slowly moving towards the Federal Reserve's target inflation rate of 2% from 2023 to 2024 was because of the volatility in food and gasoline prices.
+* In 2024, there was an increase in medical care cost because medical providers pushed for larger cost increases to cover wages and supplies as soon as their contracts with medical insurers ended. In addition, there was a significant increase in the use of specialty drugs for diabetes and weight loss.
+
+
+Source(s):
+[BLS's What caused the high inflation during the COVID-19 period?](https://www.bls.gov/opub/mlr/2023/beyond-bls/what-caused-the-high-inflation-during-the-covid-19-period.htm),
+[Federal Reserve Board's Statement on Longer-Run Goals and Monetary Policy Strategy](https://www.federalreserve.gov/monetarypolicy/files/FOMC_LongerRunGoals_202008.pdf),
+[The Transition from Excess Capacity to Strained Capacity in US Hospitals]( https://pmc.ncbi.nlm.nih.gov/articles/PMC2690165/),
+[In Celebration of 10 Years of ACA Marketplaces, the Biden-Harris Administration Releases Historic Enrollment Data]( https://www.hhs.gov/about/news/2024/03/22/celebration-10-years-aca-marketplaces-biden-harris-administration-releases-historic-enrollment-data.html),
+[The Transition from Excess Capacity to Strained Capacity in US Hospitals]( https://pmc.ncbi.nlm.nih.gov/articles/PMC2690165/),
+[The Evolution of Telehealth: Where Have We Been and Where Are We Going]( https://www.ncbi.nlm.nih.gov/books/NBK207141/),
+[The Long History of mRNA Vaccines]( https://publichealth.jhu.edu/2021/the-long-history-of-mrna-vaccines),
+[Impact of Hospital Strain on Excess Deaths During the COVID-19 Pandemic – United States, July 2020 – July 2021](https://www.cdc.gov/mmwr/volumes/70/wr/mm7046a5.htm),
+[What caused inflation to spike after 2020?]( https://www.bls.gov/opub/mlr/2023/beyond-bls/what-caused-inflation-to-spike-after-2020.htm),
+[Federal Reserve raises US Interest Rates to Highest Levels in 22 Years]( https://www.ft.com/content/110bd237-cbf2-463d-b1b5-edcb98245851),
+[Average US gas price hits $5 for first time]( https://www.cnn.com/2022/06/11/business/gas-prices-five-dollars-national-june/index.html),
+[The Federal Reserve finally hits pause on raising interest rates]( https://www.npr.org/2023/06/17/1182941206/the-federal-reserve-finally-hits-pause-on-raising-interest-rates),
+[Inflation dropped to 4% in May – but the ‘biggest risk’ is that core prices will remain sticky](https://www.cnbc.com/2023/06/13/inflation-rate-drops-but-sticky-inflation-persists.html),
+[Health care costs at work set to rise steeply in 2024]( https://www.cnn.com/2023/10/31/politics/health-care-costs-job/index.html)
+            
+'''), title="2008 and Onwards: Affordable Care Act and the Evolution in Healthcare Services"
+            ),
+        ],
+        start_collapsed=True,
+    ),
                         dcc.Graph(figure=inflation_healthcare.fig9, responsive=True),
-                        html.P(
-                            dcc.Markdown("""
-
-
-""")
-                        ),
                         dcc.Graph(figure=inflation_healthcare.fig10, responsive=True),
                         dcc.Graph(figure=inflation_healthcare.fig11, responsive=True),
                         dcc.Graph(figure=inflation_healthcare.fig2, responsive=True),
@@ -244,7 +333,7 @@ Source(s): [Understanding Stock Price and Value](https://www.investopedia.com/ar
                                     ),
                                 ],
                                 flush=True,
-                                always_open=False,
+                                start_collapsed=True,
                             )
                         )
                     ],

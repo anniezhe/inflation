@@ -189,11 +189,11 @@ fig11 = px.line(US_corporate_profit, x="DATE", y="Billions of Dollars", title='U
 #get mean and median income from FRED
 mean_personal_income = pd.read_csv("data/Mean_Personal_Income_US_AH_20241208.csv")
 mean_personal_income2 = mean_personal_income.rename({"MAPAINUSA646N":"Avg Personal income in Current Dollars"}, axis='columns')
-fig12 = px.line(mean_personal_income2, x="DATE", y="Avg Personal income in Current Dollars", title = 'Average Personal Income in the US in Current Dollars <br> <sup><a href = "https://fred.stlouisfed.org/seriesBeta/MAPAINUSA646N">Federal Reserve Bank - St.Louis Mean Personal Income in the US</a></sup>')
+fig12 = px.line(mean_personal_income2, x="DATE", y="Avg Personal income in Current Dollars", title = 'Average Personal Income in the US in Current Dollars <br><sup>Source: <a href = "https://fred.stlouisfed.org/seriesBeta/MAPAINUSA646N">Federal Reserve Bank - St.Louis Mean Personal Income in the US</a></sup>')
 
 median_personal_income=pd.read_csv("data/Personal_Income_Median_US_AH_20241205.csv")
 median_personal_income2 = median_personal_income.rename({"MEPAINUSA646N":"Median Personal Income in Current Dollars"}, axis='columns')
-fig13 = px.line(median_personal_income2, x="DATE", y="Median Personal Income in Current Dollars", title = 'Median Personal Income in the US in Current Dollars <br><sup><a href = "https://fred.stlouisfed.org/seriesBeta/MEPAINUSA646N">Federal Reserve Bank St.Louis - Median Personal Income in the US</a></sup>')
+fig13 = px.line(median_personal_income2, x="DATE", y="Median Personal Income in Current Dollars", title = 'Median Personal Income in the US in Current Dollars <br><sup>Source: <a href = "https://fred.stlouisfed.org/seriesBeta/MEPAINUSA646N">Federal Reserve Bank St.Louis - Median Personal Income in the US</a></sup>')
 
 mean_personal_income2.set_index('DATE', inplace=True)
 median_personal_income2.set_index('DATE', inplace=True)
