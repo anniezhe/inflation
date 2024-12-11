@@ -2,9 +2,11 @@ from dash import dcc, html
 import dash_bootstrap_components as dbc
 import dash
 import file.inflation_healthcare as inflation_healthcare
-
+import os
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app.title = 'Inflation & Healthcare Costs'
+app._favicon = ("assets/favicon.ico")
 server = app.server
 
 ##Descriptions
