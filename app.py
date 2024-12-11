@@ -110,6 +110,7 @@ The Baylor Plan was established to help people afford hospital care. It was the 
 
                              
 Source(s): [BLS's Chapter 16 Consumer Expenditures and Income](https://www.bls.gov/opub/hom/pdf/cex-20110915.pdf),
+[BLS's First Hundred Years of the Consumer Price Index](https://www.bls.gov/opub/mlr/2014/article/the-first-hundred-years-of-the-consumer-price-index.htm),
 [Life and Death During the Great Depression](https://www.pnas.org/doi/epdf/10.1073/pnas.0904491106),
 [Medical Care During the Depression](https://pmc.ncbi.nlm.nih.gov/articles/PMC2690273/),
 [Why Social Security Was the Cornerstone of FDR’s New Deal]( https://www.history.com/news/social-security-history-fdr-new-deal),
