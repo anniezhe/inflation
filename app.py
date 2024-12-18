@@ -73,7 +73,7 @@ app.layout = dbc.Container(
                                 html.Li(
                                     dcc.Markdown("""
                     The "Consumer Price Index for All Urban Consumers (CPI-U) - not seasonally adjusted" **with 12-month percent change (not net change) enabled** should be pulled and used if the purpose is to find out the annual inflation rate. When news reporters 
-                                     specify the inflation rate, the figure comes from this dataset. For more information, see [Overview of BLS Statistics on Inflation and Prices](https://www.bls.gov/bls/inflation.htm), [BLS's "About the CPI Inflation Calculator"](https://www.bls.gov/data/inflation_calculator.htm), [BLS's Consumer Price Index History](https://www.bls.gov/opub/hom/cpi/history.htm), and [BLS's First Hundred Years of the Consumer Price Index](https://www.bls.gov/opub/mlr/2014/article/the-first-hundred-years-of-the-consumer-price-index.htm).
+                                     specify the inflation rate, the figure comes from this dataset. For more information, see [Overview of BLS Statistics on Inflation and Prices](https://www.bls.gov/bls/inflation.htm), [BLS's "About the CPI Inflation Calculator"](https://www.bls.gov/data/inflation_calculator.htm), [BLS's "Calculating Percent Changes"](https://www.bls.gov/cpi/factsheets/calculating-percent-changes.htm), [BLS's Consumer Price Index History](https://www.bls.gov/opub/hom/cpi/history.htm), and [BLS's First Hundred Years of the Consumer Price Index](https://www.bls.gov/opub/mlr/2014/article/the-first-hundred-years-of-the-consumer-price-index.htm).
                 """)
                                 ),
                                 html.Li(
